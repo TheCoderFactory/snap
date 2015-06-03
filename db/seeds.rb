@@ -7,7 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
 album = Album.create!(name: "Cats")
 
 1.upto(2) do |num|
