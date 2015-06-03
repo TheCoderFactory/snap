@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
   def self.order_by(parameter, desc)
     if parameter
       return self.order(parameter => :desc) if desc == 'true'
-      self.order(parameter => :asc) if desc == 'false'
+      self.order(parameter => :asc)
     end
   end
 
