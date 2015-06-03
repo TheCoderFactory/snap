@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root 'albums#index'
 
   resources :albums do
-    resources :photos
+    resources :photos do
+      member do
+        post :favourite
+      end
+    end
   end
 
   get 'all_photos' => 'all_photos#index'
