@@ -5,10 +5,9 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @desc = true
-    @desc = false if params[:desc] == 'true'
-    @photos = @album.photos.order_by(params[:order_by], params[:desc])
-    @photos ||= @album.photos
+    # @desc is set to true if it has 'true' string or false for different input if the desc parameter is stipulated.
+    @desc = params[:desc] == 'true' if params[:desc]
+    @photos = @album.photos.order_by(params[:order_by], @desc)
   end
 
   # GET /photos/1
