@@ -10,5 +10,10 @@
   <%= @photo.description %>
 </p>
 
+<p>
+  <strong>Number of Views:</strong>
+    <%= @photo.views %>
+</p>
+
 <%= link_to 'Edit', edit_album_photo_path(@album, @photo) %> |
 <%= link_to 'Back', album_photos_path(@album) %>
