@@ -5,8 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Image</th>
-      <th>Description</th>
+      <th><%= link_to 'Image', album_photos_path(@album, order_by: 'image', desc: @desc) %></th>
+      <th><%= link_to 'Description', album_photos_path(@album, order_by: 'description', desc: @desc) %></th>
+			<th><%= link_to 'Views', album_photos_path(@album, order_by: 'views', desc: @desc) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

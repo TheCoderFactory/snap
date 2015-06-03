@@ -5,7 +5,10 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = @album.photos
+    @desc = true
+    @desc = false if params[:desc] == 'true'
+    @photos = @album.photos.order_by(params[:order_by], params[:desc])
+    @photos ||= @album.photos
   end
 
   # GET /photos/1
