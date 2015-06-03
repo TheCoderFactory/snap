@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @photo.image %>
-</p>
+<div class="container">
+  <div class="row">
+    <h1><%= @photo.description %></h1>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @photo.description %>
-</p>
-
-<%= link_to 'Edit', edit_album_photo_path(@album, @photo) %> |
-<%= link_to 'Back', album_photos_path(@album) %>
+  <div class="row">
+    <%= image_tag @photo.image, class: "center-block img-responsive" %>
+    <div class="text-center">
+      <%= link_to 'Edit', edit_album_photo_path(@album, @photo), class: "btn" %>
+      <%= link_to 'Back', album_photos_path(@album), class: "btn" %>
+    </div>
+  </div>
+</div>

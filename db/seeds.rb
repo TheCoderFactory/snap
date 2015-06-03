@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+album = Album.create!(name: "Cats")
+
+1.upto(2) do |num|
+  File.open("db/cat#{num}.jpg") do |f|
+    album.photos.create!(image: f, description: "cat pic no.#{num}")
+  end
+end
