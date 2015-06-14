@@ -9,16 +9,12 @@
   <div class="row">
 
     <% @photos.each do |photo| %>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <%= link_to image_tag(photo.image), album_photo_path(@album, photo), class: "thumbnail" %>
-        <div class="text-center">
-          <p> <%= photo.description %></p>
-          <%= link_to 'Edit', edit_album_photo_path(@album, photo), class: "btn" %>
-          <%= link_to 'Destroy', [@album, photo], class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
+      <div class="col-sm-6 col-lg-4">
+        <%= link_to image_tag(photo.image, class: "img-responsive"), album_photo_path(@album, photo) %>
+        <p><%= photo.description %></p>
+        <p><%= link_to 'Edit', edit_album_photo_path(@album, photo), class: "btn btn-default" %></p>
+        <p><%= link_to 'Destroy', [@album, photo], class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div>
     <% end %>
   </div>
 </div>
-
-<br>

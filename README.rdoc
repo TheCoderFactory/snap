@@ -1,28 +1,18 @@
-== README
+SNAP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Photo album web app project.
 
-Things you may want to cover:
+Class 8.3
+Create a new Rails project called "snap".
+Create an Album model that has a name attribute
+Create a Photo model that belongs to Album (give it description, filename attributes)
+Ensure you create correct database migrations and run rake db:migrate
+Using the Rails console, create 3 album objects, and a few photos for each.
+You can put some images in app/assets/images/ and store their filenames with your song objects
+Implement Album and Photos controllers for your application.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Class 9.3
+Open or clone the snap app
+Create a branch to add this story: A Visitor can see how many times an image has been viewed so that they can ascertain popularity
+Have your code reviewed with a pull request
+Merge the branch
